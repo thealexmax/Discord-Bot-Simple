@@ -13,7 +13,7 @@ const responses = require('./responses.json');
 //Are this LTT References?
 let ltt = [
     "lttstore.com",
-    "Esta canción está me gusta, y sabes que también me gusta, ¡Glasswire! Glasswire te permite monitorizar toda tu actividad de red. Usa el código 'Linus' para un 25% de descuento en enlace en la descripción",
+    "Esta canción me gusta, y sabes que también me gusta, ¡Glasswire! Glasswire te permite monitorizar toda tu actividad de red. Usa el código 'Linus' para un 25% de descuento en enlace en la descripción",
     "Solo de escuchar esta canción me dan ganas de tirar un procesador de 1000$",
     "THIS VIDEO IS BROUGHT YOU BY FRESBOOKS",
     "https://www.youtube.com/watch?v=arwjAtrwl7w"
