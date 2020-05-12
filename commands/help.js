@@ -12,7 +12,7 @@ module.exports.run = async(bot, message) => {
     {name: `${config.prefix}8ball <Algo>`, value: 'Pregúntale algo a latios para que exprese su opinión sobre el tema'},
     {name: `${config.prefix}coin <cara/cruz>`, value: 'Ya deberías de saber como va la cosa'},
     {name: `${config.prefix}profile`, value: 'EXPERIMENTAL'})
-    .setFooter('Latios Delta ~VSCODE:InDev~ ~NokiManager~');
+    .setFooter('Latios Beta');
     message.channel.send(embed);
 }
 
