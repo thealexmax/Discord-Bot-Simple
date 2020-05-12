@@ -1,0 +1,6 @@
+{
+    "prefix": "YOUR_PREFIX",
+    "token": "DISCORD_TOKEN",
+    "ytapikey": "YT_API_KEY",
+    "tenorapi": "TENOR_API_KEY"
+}
