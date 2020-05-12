@@ -1,0 +1,22 @@
+{
+  "name": "latiosjs",
+  "version": "1.0.0",
+  "description": "Discord Bot",
+  "main": "latios.js",
+  "dependencies": {
+    "@discordjs/opus": "^0.1.0",
+    "discord.js": "^12.1.1",
+    "gif-search": "^2.1.0",
+    "node-html-to-image": "^1.2.0",
+    "simple-youtube-api": "^5.2.1",
+    "sqlite3": "^4.1.1",
+    "ytdl-core": "^2.0.1",
+    "ytdl-core-discord": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Wolf",
+  "license": "ISC"
+}

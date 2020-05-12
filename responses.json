@@ -1,0 +1,32 @@
+{
+    "error": {
+      "noJoinedVoiceChannel": [
+        "Perdona, pero necesito que te metas en un canal de voz para poder hacer eso ;)",
+        "No sé cuáles eran tus intenciones, pero para poder reproducir eso necesito que te metas a un canal de voz",
+        "Creo que se te ha olvidado meterte a un canal de voz",
+        "Métete a un canal de voz porfa :)",
+        "Buen intento, pero necesito que te metas a un canal de voz"
+        ],
+        "noURLFound": [
+          "Necesito que me digas la url de la canción",
+          "Me hace falta la URL de la canción",
+          "Si quieres buscar una canción por su nombre usa .song porfa ;)",
+          "Me pasas la URL de lo que quieres poner?"
+        ],
+        "noVoiceConnection": [
+          "No estoy en ningún canal de voz actualmente",
+          "Para ejecutar eso debo de estar reproduciendo algo",
+          "No encuentro ninguna conexión de voz establecida, creo que debes usar .play para que ponga algo"
+        ],
+        "notSameVC": [
+          "Ahora mismo estoy en otro canal de voz, prueba usar esta función algo más tarde",
+          "Estoy en otro canal de voz ahora mismo, sry :/",
+          "Espérate un poco más porfa que ahora ya estoy reproduciendo música en otro lado C:"
+        ],
+        "noArgs0": [
+          "Error: No encuentro un segundo argumento en el comando",
+          "Debes de poner algo más para que yo pueda hacer mis cálculos",
+          "Creo que te falta algo :/"
+        ]
+    }
+  }
