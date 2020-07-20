@@ -12,7 +12,7 @@ client.on('ready', () => {
     console.log(`Logged in as: ${client.user.tag}`);
 });
 
-client.on('message', msg => {
+client.on('message', async msg => {
     if(msg.author.bot) return;
     if(!msg.content.startsWith(config.prefix)) return;
     //Convert Message String into an Array
@@ -39,6 +39,7 @@ client.on('message', msg => {
                 return;
             }
             if(msg.guild.me.voice.connection) {
+                if(msg.guild.me.voice.channel.id != msg.member.voice.channel.id) return;
                 queue.push(joinArgs);
                 msg.channel.send("Canción añadida a la cola");
                 return;
@@ -81,6 +82,34 @@ client.on('message', msg => {
             }
             play(msg, msg.guild.me.voice.connection);
             break;
+        case "playlist":
+            if(!msgArray[1]) {
+                msg.reply("Necesito que me pases un enlace!");
+                return;
+            }
+            if(!msg.guild.me.voice.connection) {
+                msg.member.voice.channel.join().then(async connection => {
+                    let playlist = await getPlaylistInfo(joinArgs);
+                    playlist.forEach(v => {
+                        queue.push(v.url);
+                    });
+                    play(msg, connection);
+                    return;
+                }).catch(console.error);
+            }
+            if(!msg.member.voice.channel) {
+                msg.reply("Necesito que te metas al canal de voz para hacer eso >.<");
+                return;
+            }
+            if(msg.member.voice.channel.id != msg.guild.me.voice.channel.id) {
+                msg.reply("Debes de estar en el mismo canal de voz que yo para hacer eso");
+                return;
+            }
+            let playlist = await getPlaylistInfo(joinArgs);
+            playlist.forEach(v => {
+                queue.push(v.url);
+            });
+            break;
     } 
 });
 
@@ -97,6 +126,12 @@ async function titleToURL(title) {
     console.log("Converting title to URL");
     let videos = await ytapi.searchVideos(title);
     return videos[0].url;
+}
+
+async function getPlaylistInfo(url) {
+    console.log("Playlist Function Triggered");
+    let videos = await (await ytapi.getPlaylist(url)).getVideos();
+    return videos;
 }
 
 async function play(message, connection) {
